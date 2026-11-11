@@ -21,19 +21,31 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom header styling
+# Custom header styling — University Gold Banner
 st.markdown("""
     <style>
-    .main-title {
-        font-size: 2.3rem;
-        font-weight: 700;
-        color: #1E3A8A;
-        margin-bottom: 0.2rem;
+    .gold-header-banner {
+        background: linear-gradient(135deg, #FFFBEB 0%, #FEF08A 25%, #FACC15 65%, #EAB308 100%);
+        border: 2px solid #CA8A04;
+        border-radius: 14px;
+        padding: 22px 28px;
+        margin-bottom: 25px;
+        box-shadow: 0 8px 20px rgba(202, 138, 4, 0.22);
     }
-    .sub-title {
-        font-size: 1.1rem;
-        color: #4B5563;
-        margin-bottom: 1.5rem;
+    .gold-main-title {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: #0F172A;
+        margin: 0 0 6px 0;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+    }
+    .gold-sub-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #1E293B;
+        margin: 0;
+        line-height: 1.35;
     }
     .metric-card {
         background-color: #F3F4F6;
@@ -42,10 +54,11 @@ st.markdown("""
         border-left: 5px solid #2563EB;
     }
     </style>
+    <div class="gold-header-banner">
+        <div class="gold-main-title">⛅ Shawbury Weather AI Predictor</div>
+        <div class="gold-sub-title">University of Wolverhampton — Computer Science & AI Interactive Demo for Sandwell College</div>
+    </div>
 """, unsafe_allow_html=True)
-
-st.markdown('<div class="main-title">⛅ Shawbury Weather AI Predictor</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">University of Wolverhampton — Computer Science & AI Interactive Demo for Sandwell College</div>', unsafe_allow_html=True)
 
 # ---------------------------------------------------------
 # 2. Dataset Loading (Self-Contained Fallback + CSV/URL Support)
